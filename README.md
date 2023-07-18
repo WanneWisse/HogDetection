@@ -24,6 +24,12 @@ Next you can run "generate_train_data.py" which takes patches out of the object 
 "HOG.py" has all the main logic of the hog feature extraction. "detection.py" first initializes the HOG dectector, first you need to train the SVM with the training data. If you have already trained the model you can comment this line and just load the model. 
 Next it uses an image, you can try my "test_img.jpg" and traverses with a stride over the image and check what the prop is that that patch is the object. It return the best match and draws the location on the gradient and color image. 
 
+Some results:
+
+![alt text](https://github.com/WanneWisse/HogDetection/blob/master/readme2.png?raw=true)
+![alt text](https://github.com/WanneWisse/HogDetection/blob/master/readme1.png?raw=true)
+
+
 Tip: The object which you want to detect should be well defined by gradients. Play around with the threshold to delete noisy gradients with low maginitude. Also check the "detector_output" map to see what the top 20 patches were to get more insight in the performance of the model.
 
 And most of all, have fun!
